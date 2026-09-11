@@ -1,9 +1,10 @@
 /**
  * ALICE ESL Phonics P5 - 小兔冰上拼讀大冒險題庫
  * 課本學習範圍：Page 04 - 09
- * 主題：Digraph Sounds & Days of the Week
+ * 主題：Digraph Sounds & Food / Days
  */
 
+window.BOOK_ID = "P5";
 const P5_VOCABULARY = [
   {
     "id": "Friday",
@@ -810,10 +811,6 @@ const P5_VOCABULARY = [
 // 自然發音/首音分組（對應課本 Page 04 - 09）
 const PHONICS_GROUPS = {
   "th": [
-    "thumb",
-    "think",
-    "teeth",
-    "math",
     "mouth",
     "father",
     "mother",
@@ -821,11 +818,7 @@ const PHONICS_GROUPS = {
     "smooth"
   ],
   "st": [
-    "store",
-    "be still",
     "stew",
-    "stop",
-    "stick",
     "star",
     "stamp"
   ],
@@ -839,75 +832,68 @@ const PHONICS_GROUPS = {
   ],
   "ng": [
     "hanging",
-    "licking",
     "sing",
     "feeding",
-    "morning",
-    "swing"
+    "morning"
   ]
 };
 
 // 課文動作與問答情境題庫
 const ANIMAL_ACTION_QUESTIONS = [
   {
-    "subject": "Father",
-    "action": "cook",
-    "sentence": "Father can cook hot stew in the kitchen.",
-    "question": "What can father cook?",
+    "sentence": "Look at the big brown bear in the forest.",
+    "question": "What animal is in the forest?",
+    "ttsPrompt": "Look at the big brown bear in the forest. What animal is in the forest?",
+    "options": [
+      "bear",
+      "bird",
+      "cow"
+    ],
+    "correct": "bear"
+  },
+  {
+    "sentence": "Granny cooks hot delicious stew at the restaurant.",
+    "question": "What does Granny cook?",
+    "ttsPrompt": "Granny cooks hot delicious stew at the restaurant. What does Granny cook?",
     "options": [
       "stew",
-      "socks",
-      "star"
+      "cake",
+      "egg"
     ],
     "correct": "stew"
   },
   {
-    "subject": "Mother",
-    "action": "feed",
-    "sentence": "Mother is feeding the sweet ducks.",
-    "question": "What is mother doing?",
+    "sentence": "The hungry boy wants a slice of warm bread.",
+    "question": "What does the boy want to eat?",
+    "ttsPrompt": "The hungry boy wants a slice of warm bread. What does the boy want?",
     "options": [
-      "feeding",
-      "singing",
-      "jumping"
+      "bread",
+      "dish",
+      "socks"
     ],
-    "correct": "feeding"
+    "correct": "bread"
   },
   {
-    "subject": "Girl",
-    "action": "sing",
-    "sentence": "She can sing a lovely song in the morning.",
-    "question": "What can she do?",
+    "sentence": "Mother is feeding the lovely yellow chicks.",
+    "question": "Who is mother feeding?",
+    "ttsPrompt": "Mother is feeding the lovely yellow chicks. Who is mother feeding?",
+    "options": [
+      "chicks",
+      "ducks",
+      "books"
+    ],
+    "correct": "chicks"
+  },
+  {
+    "sentence": "Children sing a beautiful song on Monday.",
+    "question": "What can the children do?",
+    "ttsPrompt": "Children sing a beautiful song on Monday. What can the children do?",
     "options": [
       "sing",
-      "stop",
-      "stamp"
+      "hop",
+      "kick"
     ],
     "correct": "sing"
-  },
-  {
-    "subject": "Boy",
-    "action": "look",
-    "sentence": "Look at the bright star in the sky!",
-    "question": "What is in the sky?",
-    "options": [
-      "star",
-      "dish",
-      "bed"
-    ],
-    "correct": "star"
-  },
-  {
-    "subject": "Child",
-    "action": "jump",
-    "sentence": "He can jump and swing on Friday.",
-    "question": "What can he do on Friday?",
-    "options": [
-      "swing",
-      "chew",
-      "cook"
-    ],
-    "correct": "swing"
   }
 ];
 

@@ -1,4 +1,4 @@
-{
+window.SENTENCES_AUDIO_MAP = {
   "Collect all carrots starting with th": "assets/audios/sentences/bunny_collect_th.mp3",
   "Find words starting with th": "assets/audios/sentences/bunny_find_th.mp3",
   "Find words starting with letter th": "assets/audios/sentences/bunny_find_let_th.mp3",
@@ -16,4 +16,4 @@
   "The hungry boy wants a slice of warm bread. ... What does the boy want to eat?": "assets/audios/sentences/bunny_act_26602325.mp3",
   "Mother is feeding the lovely yellow chicks. ... Who is mother feeding?": "assets/audios/sentences/bunny_act_1fc13cc6.mp3",
   "Children sing a beautiful song on Monday. ... What can the children do?": "assets/audios/sentences/bunny_act_418e96d2.mp3"
-}
+};

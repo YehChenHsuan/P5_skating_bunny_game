@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 冰上 3D 閃卡浮標、胡蘿蔔與粒子爆炸系統 (Collectibles & Particle System)
  * 升級版：大尺寸高清晰度圖卡、始終正對鏡頭 (Billboard)、文字高對比與零空白防禦
  */
@@ -300,7 +300,15 @@ class CollectiblesManager {
   }
 
   explodeParticles(x, y, z, isGolden = true) {
-    const count = 50;
+    const count = 30; // ★ 優化：從 50 降至 30 提升幀率
+    const maxPoolSize = 150; // 粒子池總數上限
+
+    // 若粒子池即將超過上限，先淘汰最舊的粒子
+    while (this.particlePool.length + count > maxPoolSize && this.particlePool.length > 0) {
+      const oldest = this.particlePool.shift();
+      this.particleGroup.remove(oldest.mesh);
+    }
+
     for (let i = 0; i < count; i++) {
       const isGold = Math.random() > 0.35;
       const mesh = new THREE.Mesh(
@@ -411,3 +419,4 @@ class CollectiblesManager {
     }
   }
 }
+
